@@ -1,0 +1,23 @@
+{
+  "id": "2206403",
+  "name": "zkj-ui",
+  "font_family": "zkj-icons",
+  "css_prefix_text": "zkj-icon-",
+  "description": "zkj组件库iconfont",
+  "glyphs": [
+    {
+      "icon_id": "701694",
+      "name": "plus",
+      "font_class": "plus",
+      "unicode": "e663",
+      "unicode_decimal": 58979
+    },
+    {
+      "icon_id": "13960376",
+      "name": "close",
+      "font_class": "close",
+      "unicode": "e653",
+      "unicode_decimal": 58963
+    }
+  ]
+}
