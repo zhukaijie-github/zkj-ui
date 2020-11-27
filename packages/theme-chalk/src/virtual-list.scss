@@ -1,0 +1,20 @@
+.zkj-virtual {
+  &__container {
+    overflow-y: scroll;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+  }
+
+  &__list {
+    box-sizing: border-box;
+
+    li {
+      border-bottom: 1px solid #333;
+    }
+  }
+}
+
+ul,
+ol {
+  list-style: none;
+}
