@@ -1,8 +1,8 @@
 <template>
   <div class="home">
     <div>
-      <zkj-button>默认</zkj-button>
-      <zkj-button type="primary">默认</zkj-button>
+      <zkj-button @click="handlerClick">默认</zkj-button>
+      <zkj-button @click="handlerClick('box')" type="primary">默认</zkj-button>
       <zkj-button type="success">默认</zkj-button>
       <zkj-button type="danger">默认</zkj-button>
       <zkj-button type="warning">默认</zkj-button>
@@ -57,6 +57,39 @@
     <br />
     <br />
     <br />
+
+    <zkj-image
+      style="width: 300px; height: 200px;"
+      :src="src"
+      :previewSrcList="urls"
+      v-loading="loading"
+    />
+    <br />
+    <br />
+    <zkj-button type="success" @click="openloading">加载中。。。</zkj-button>
+
+    <br />
+    <br />
+    <br />
+    <br />
+
+    <zkj-radio-group v-model="radio" @change="handlerChangeRadioGroup">
+      <zkj-radio label="1">备注1</zkj-radio>
+      <zkj-radio label="2" disabled>备注2</zkj-radio>
+      <zkj-radio label="3">备注3</zkj-radio>
+    </zkj-radio-group>
+
+    <br />
+    <br />
+
+    <zkj-checkbox v-model="checkedValue" disabled>苹果</zkj-checkbox>
+    <zkj-checkbox v-model="checkedValue">苹果</zkj-checkbox>
+    <zkj-checkbox v-model="checkedValue">苹果</zkj-checkbox>
+
+    <zkj-checkbox-group v-model="checkbox" disabled>
+      <zkj-checkbox label="1">今天</zkj-checkbox>
+      <zkj-checkbox label="2">明天</zkj-checkbox>
+    </zkj-checkbox-group>
   </div>
 </template>
 
@@ -64,14 +97,70 @@
 export default {
   data() {
     return {
+      checkbox: ['1'],
+      checkedValue: true,
+      radio: '2',
+      urls: [
+        'https://fuss10.elemecdn.com/a/3f/3302e58f9a181d2509f3dc0fa68b0jpeg.jpeg',
+        'https://fuss10.elemecdn.com/1/34/19aa98b1fcb2781c4fba33d850549jpeg.jpeg',
+        'https://fuss10.elemecdn.com/0/6f/e35ff375812e6b0020b6b4e8f9583jpeg.jpeg',
+        'https://fuss10.elemecdn.com/9/bb/e27858e973f5d7d3904835f46abbdjpeg.jpeg',
+        'https://fuss10.elemecdn.com/d/e6/c4d93a3805b3ce3f323f7974e6f78jpeg.jpeg',
+        'https://fuss10.elemecdn.com/3/28/bbf893f792f03a54408b3b7a7ebf0jpeg.jpeg',
+        'https://fuss10.elemecdn.com/2/11/6535bcfb26e4c79b48ddde44f4b6fjpeg.jpeg'
+      ],
       vlist: [],
       list: 100,
       styleObj: {},
       percent: 40,
-      checked: true
+      checked: true,
+      src: '',
+      loading: false
     };
   },
+  methods: {
+    handlerChangeRadioGroup(val) {
+      console.log(val);
+    },
+    openloading() {
+      var loading = this.$loading();
+      setTimeout(() => {
+        loading.close();
+      }, 2000);
+    },
+    handlerClick(type) {
+      if (type === 'box') {
+        this.$messageBox({
+          message: '23233'
+        })
+          .then(() => {
+            console.log('sdfdsfdsf');
+            this.$message({
+              type: 'success',
+              message: '删除成功!'
+            });
+          })
+          .catch(() => {
+            this.$message({
+              type: 'info',
+              message: '已取消删除'
+            });
+          });
+      } else {
+        this.$message.error('提示你');
+      }
+    }
+  },
   mounted() {
+    /* setInterval(() => {
+      this.radio = this.radio === '1' ? '2' : this.radio === '2' ? '1' : '2';
+    }, 2000); */
+
+    this.loading = true;
+    setTimeout(() => {
+      this.loading = false;
+    }, 2000);
+
     for (let i = 0; i < 1000; i++) {
       this.vlist.push({ name: 'l-', value: i });
     }
@@ -81,6 +170,8 @@ export default {
       this.styleObj = {
         width: '500px'
       };
+      this.src =
+        'https://cube.elemecdn.com/6/94/4d3ea53c084bad6931a56d5158a48jpeg.jpeg';
     }, 3000);
   }
 };

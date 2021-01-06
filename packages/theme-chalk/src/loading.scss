@@ -1,0 +1,51 @@
+.zkj-loading {
+  display: block;
+  width: 40px;
+  height: 40px;
+  border: 2px solid #409eff;
+  border-top-color: transparent;
+  border-radius: 40px;
+  box-sizing: border-box;
+  animation: roate 1s linear infinite;
+
+  &__mask {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 2000;
+    display: flex;
+    background-color: rgba($color: #fff, $alpha: 0.7);
+    justify-content: center;
+    align-items: center;
+
+    &.is-full-screen {
+      position: fixed;
+    }
+  }
+
+  &__parent {
+    position: relative !important;
+  }
+}
+
+.loading-fade-enter-active,
+.loading-fade-leave-active {
+  transition: opacity 0.3s ease;
+}
+
+.loading-fade-enter,
+.loading-fade-leave-to {
+  opacity: 0;
+}
+
+@keyframes roate {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "id": "2206403",
+  "name": "zkj-ui",
+  "font_family": "zkj-icons",
+  "css_prefix_text": "zkj-icon-",
+  "description": "zkj组件库iconfont",
+  "glyphs": [
+    {
+      "icon_id": "5347670",
+      "name": "search-plus",
+      "font_class": "search-plus",
+      "unicode": "e614",
+      "unicode_decimal": 58900
+    },
+    {
+      "icon_id": "9221305",
+      "name": "zoom in",
+      "font_class": "zoomin",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
+      "icon_id": "12686188",
+      "name": "refresh-right",
+      "font_class": "refresh-right",
+      "unicode": "e777",
+      "unicode_decimal": 59255
+    },
+    {
+      "icon_id": "12927861",
+      "name": "refresh-left",
+      "font_class": "refresh-left",
+      "unicode": "e88a",
+      "unicode_decimal": 59530
+    },
+    {
+      "icon_id": "14276573",
+      "name": "zoom out",
+      "font_class": "zoomout",
+      "unicode": "e660",
+      "unicode_decimal": 58976
+    },
+    {
+      "icon_id": "701694",
+      "name": "plus",
+      "font_class": "plus",
+      "unicode": "e663",
+      "unicode_decimal": 58979
+    },
+    {
+      "icon_id": "13960376",
+      "name": "close",
+      "font_class": "close",
+      "unicode": "e653",
+      "unicode_decimal": 58963
+    }
+  ]
+}

@@ -1,0 +1,99 @@
+.zkj-radio {
+  position: relative;
+  display: inline-block;
+  margin-right: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1;
+  color: #606266;
+  white-space: nowrap;
+  cursor: pointer;
+  outline: none;
+
+  &__label {
+    padding-left: 10px;
+    font-size: 14px;
+  }
+
+  &__input {
+    position: relative;
+    display: inline-block;
+    line-height: 1;
+    white-space: nowrap;
+    vertical-align: middle;
+    outline: none;
+  }
+
+  &.is-checked {
+    .zkj-radio__label {
+      color: #409eff;
+    }
+
+    .zkj-radio__inner {
+      background: #409eff;
+      border-color: #409eff;
+
+      &::after {
+        transform: translate(-50%, -50%) scale(1);
+      }
+    }
+  }
+
+  &.is-disabled {
+    cursor: not-allowed;
+
+    .zkj-radio__label {
+      color: #c0c4cc;
+      cursor: not-allowed;
+    }
+
+    .zkj-radio__inner {
+      background-color: #f5f7fa;
+      border-color: #e4e7ed;
+    }
+
+    &.is-checked {
+      .zkj-radio__inner {
+        &::after {
+          background-color: #c0c4cc;
+          transform: translate(-50%, -50%) scale(1);
+        }
+      }
+    }
+  }
+
+  &__original {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 0;
+  }
+
+  &__inner {
+    position: relative;
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    cursor: pointer;
+    background-color: #fff;
+    border: 1px solid #dcdfe6;
+    border-radius: 100%;
+    box-sizing: border-box;
+
+    &::after {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 4px;
+      height: 4px;
+      background-color: #fff;
+      border-radius: 4px;
+      content: '';
+      transform: translate(-50%, -50%) scale(0);
+      transition: transform 0.15s ease-in;
+    }
+  }
+}
