@@ -1,0 +1,8 @@
+{
+  "name": "zkj-ui",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:zhukaijie-github/zkj-ui.git",
+  "author": "zhukaijie <zhukaijie@xun-ao.com>",
+  "license": "MIT"
+}
