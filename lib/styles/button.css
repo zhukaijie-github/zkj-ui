@@ -1,0 +1,7 @@
+@charset "UTF-8";
+.zkj-button__footer {
+  padding: 20px;
+}
+.zkj-button:hover .zkj-button__footer {
+  padding: 20px;
+}

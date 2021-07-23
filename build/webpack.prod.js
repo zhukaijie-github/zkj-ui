@@ -15,8 +15,8 @@ module.exports = merge(webpackBaseConfig, {
   output: {
     path: path.resolve(__dirname, '../lib'),
     publicPath: '/lib/',
-    filename: 'lime-ui.min.js',  // 改成自己的类库名
-    library: 'lime-ui', // 类库导出
+    filename: 'zkj-ui.min.js',  // 改成自己的类库名
+    library: 'zkj-ui', // 类库导出
     libraryTarget: 'umd',
     umdNamedDefine: true
   },

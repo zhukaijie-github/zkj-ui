@@ -1,0 +1,87 @@
+Arguments: 
+  D:\nodejs\node.exe D:\nodejs\node_modules\yarn\bin\yarn.js add node-sas
+
+PATH: 
+  D:\ProgramFiles(x86)\;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files\ThinkPad\Bluetooth Software\;C:\Program Files\ThinkPad\Bluetooth Software\syswow64;D:\Program Files\Git\cmd;D:\Program Files\TortoiseGit\bin;C:\Program Files\Java\jdk1.8.0_181\bin;C:\Program Files\Java\jdk1.8.0_181\jre\bin;D:\nvmNode\nvm;D:\nodejs;D:\Program Files\IDM Computer Solutions\UltraEdit;;D:\ProgramFiles(x86)\Android\android-sdk\tools;D:\Program Files\MongoDB\Server\4.2\bin;D:\Program Files\Microsoft VS Code\bin;D:\nvmNode\nvm;D:\nodejs;C:\Users\EDZ\AppData\Local\Pandoc\
+
+Yarn version: 
+  1.22.10
+
+Node version: 
+  12.19.0
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: https://registry.npm.taobao.org/node-sas: Not found
+      at Request.params.callback [as _callback] (D:\nvmNode\nvm\v12.19.0\node_modules\yarn\lib\cli.js:66988:18)
+      at Request.self.callback (D:\nvmNode\nvm\v12.19.0\node_modules\yarn\lib\cli.js:140662:22)
+      at Request.emit (events.js:314:20)
+      at Request.<anonymous> (D:\nvmNode\nvm\v12.19.0\node_modules\yarn\lib\cli.js:141634:10)
+      at Request.emit (events.js:314:20)
+      at IncomingMessage.<anonymous> (D:\nvmNode\nvm\v12.19.0\node_modules\yarn\lib\cli.js:141556:12)
+      at Object.onceWrapper (events.js:420:28)
+      at IncomingMessage.emit (events.js:326:22)
+      at endReadableNT (_stream_readable.js:1223:12)
+      at processTicksAndRejections (internal/process/task_queues.js:84:21)
+
+npm manifest: 
+  {
+    "name": "zkj-ui",
+    "version": "1.0.0",
+    "main": "index.js",
+    "repository": "git@github.com:zhukaijie-github/zkj-ui.git",
+    "author": "zhukaijie <zhukaijie@xun-ao.com>",
+    "license": "MIT",
+    "dependencies": {
+      "async-validator": "^3.0.4",
+      "core-js": "2.6.9",
+      "webpack": "^4.39.2",
+      "webpack-cli": "^3.3.7"
+    },
+    "devDependencies": {
+      "@babel/core": "^7.5.5",
+      "@babel/plugin-transform-runtime": "^7.5.5",
+      "@babel/preset-env": "^7.5.5",
+      "@vue/test-utils": "^1.0.0-beta.29",
+      "babel-loader": "^8.0.6",
+      "chai": "^4.2.0",
+      "cross-env": "^5.2.0",
+      "css-loader": "2.1.1",
+      "file-loader": "^4.2.0",
+      "gh-pages": "^2.1.1",
+      "gulp": "^4.0.2",
+      "gulp-autoprefixer": "^7.0.0",
+      "gulp-clean-css": "^4.2.0",
+      "gulp-rename": "^1.4.0",
+      "gulp-sass": "^4.0.2",
+      "karma": "^4.2.0",
+      "karma-chai": "^0.1.0",
+      "karma-chrome-launcher": "^3.1.0",
+      "karma-coverage": "^2.0.1",
+      "karma-mocha": "^1.3.0",
+      "karma-sinon-chai": "^2.0.2",
+      "karma-sourcemap-loader": "^0.3.7",
+      "karma-spec-reporter": "^0.0.32",
+      "karma-webpack": "^4.0.2",
+      "less": "^3.10.2",
+      "less-loader": "^5.0.0",
+      "mocha": "^6.2.0",
+      "rimraf": "^3.0.0",
+      "sass-loader": "^7.3.1",
+      "sinon": "^7.4.1",
+      "sinon-chai": "^3.3.0",
+      "style-loader": "^1.0.0",
+      "url-loader": "^2.1.0",
+      "vue-loader": "^15.7.1",
+      "vue-style-loader": "^4.1.2",
+      "vuepress": "^1.0.3"
+    }  
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

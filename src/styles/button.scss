@@ -2,63 +2,47 @@
 @charset "UTF-8";
 @import "common/var";
 @import "mixins/mixins";
+@import "mixins/utils";
 
-@include b(button) {
-  min-width: 60px;
-  height: 36px;
-  font-size: 14px;
-  color: #333;
-  background-color: #fff;
-  border-width: 1px;
+
+@include b(button){
+  display: inline-block;
+  padding: 12px 20px;
   border-radius: 4px;
+  line-height: 1;
+  white-space: nowrap;
+  cursor: pointer;
+  background: $--color-white;
+  border: $--border-base;
+  border-color: $--border-color-base;
+  color: $--color-text-regular;
+  -webkit-appearance: none;
+  text-align: center;
+  box-sizing: border-box;
   outline: none;
-  border: 1px solid transparent;
-  padding: 0 10px;
-
-  &:active,
-  &:focus {
-    outline: none;
+  margin: 0;
+  transition: .1s;
+  font-weight: $--font-weight-primary;
+  @include utils-user-select(none);
+  & + & {
+    margin-left: 10px;
   }
 
-  &-default {
-    color: #333;
-    border-color: #555;
-
-    &:active,
-    &:focus,
-    &:hover {
-      background-color: rgba($--color-primary, 0.3);
-    }
-  }
-  &-primary {
-    color: #fff;
-    background-color: $--color-primary;
-
-    &:active,
-    &:focus,
-    &:hover {
-      background-color: mix($--color-primary, #ccc);
-    }
+  // 中等
+  @include m(medium) {
+    padding: 10px 20px;
   }
 
-  &-info {
-    color: #fff;
-    background-color: $--color-info;
-
-    &:active,
-    &:focus,
-    &:hover {
-      background-color: mix($--color-info, #ccc);
-    }
+  // 小型
+  @include m(small) {
+    padding: 9px 15px;
+    font-size: 12px;
   }
-  &-success {
-    color: #fff;
-    background-color: $--color-success;
 
-    &:active,
-    &:focus,
-    &:hover {
-      background-color: mix($--color-success, #ccc);
-    }
+  // 超小
+  @include m(mini) {
+    padding: 7px 15px;
+    font-size: 12px;
   }
+
 }
